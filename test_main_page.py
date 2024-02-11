@@ -9,3 +9,9 @@ def test_guest_can_go_to_login_page(browser):
     page.open() # opening the page
     # executing the page method — go to the login page
     page.go_to_login_page()
+
+def test_guest_should_see_login_link(browser):
+    link = "http://selenium1py.pythonanywhere.com/"
+    page = MainPage(browser, link)
+    page.open()
+    page.should_be_login_link()
