@@ -14,4 +14,5 @@ class ProductPageLocators:
     MS_PRODUCT_NAME = (By.CSS_SELECTOR, "#messages > div:nth-child(1) > div > strong")
     PRODUCT_PRICE = (By.CSS_SELECTOR, "tr:nth-child(4) > td")
     MS_PRODUCT_PRICE = (By.CSS_SELECTOR, "div.alertinner  > p > strong")
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, "#messages > div:nth-child(1) > div")
 
