@@ -8,11 +8,12 @@ class ProductPage(BasePage):
 	def can_add_product_to_basket(self):
 		self.should_add_product_to_basket()
 		self.should_be_same_name()
-		time.sleep(3)
+		time.sleep(1)
 
 	def should_add_product_to_basket(self):
 		basket_link = self.browser.find_element(*ProductPageLocators.BASKET_LINK)
 		basket_link.click()
+		# The function was needed to solve a parameterization problem.
 		# BasePage.solve_quiz_and_get_code(self)
 
 	def should_be_same_name(self):
@@ -30,6 +31,3 @@ class ProductPage(BasePage):
 	def should_disappear_message(self):
 		assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
 			"Message didn't disappeared after adding product to basket"
-
-
-
